@@ -3,6 +3,7 @@ WORKDIR /app
 
 COPY . .
 RUN mvn clean install
+RUN mvn compile
 RUN mvn test
 FROM openjdk:17-jdk-slim
 WORKDIR /app
